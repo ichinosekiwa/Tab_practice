@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+.container {
+  width: 80vw;
+  margin: 100px auto 0;
+  padding: 16px;
+  background-color: #ffffff;
+}
+
+.tabs {
+  display: flex;
+  font-size: 16px;
+  border-bottom: 1px solid #bbbbbb2d;
+}
+
+.tabs li {
+  width: 15%;
+  padding: 8px;
+  text-align: center;
+}
+.tabs li.active {
+  cursor: pointer;
+  background-color: #4f4f4f;
+  color: #fff;
+}
+.tabs li:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.contents {
+  display: flex;
+}
+
+.contents li {
+  display: none;
+}
+.contents li.active {
+  display: flex;
+  background-color: #d3d3d3;
+  width: 100%;
+  padding: 8px;
+}
