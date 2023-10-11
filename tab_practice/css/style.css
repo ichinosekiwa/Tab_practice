@@ -20,7 +20,6 @@ ul li {
   display: flex;
   font-size: 16px;
   border-bottom: 1px solid #bbbbbb2d;
-  justify-content: space-between;
 }
 
 .tabs li {
@@ -38,6 +37,20 @@ ul li {
   opacity: 0.6;
 }
 
+.first-tabs,
+.second-tabs {
+  display: none;
+}
+.first-tabs.active{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.second-tabs.active{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
 .contents {
   display: flex;
 }
