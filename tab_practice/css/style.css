@@ -66,6 +66,18 @@ ul li {
 }
 
 .arrow {
+  display: none;
+}
+.arrow.active {
   width: 40px;
   height: 40px;
+  display: block;
+}
+.arrow-2 {
+  display: none;
+}
+.arrow-2.active {
+  width: 40px;
+  height: 40px;
+  display: block;
 }
