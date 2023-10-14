@@ -2,7 +2,7 @@
 
 const tabs = document.querySelectorAll('.tabs li');
 const contents = document.querySelectorAll('.contents li');
-const arrowRight = document.querySelector('.arrow-right'); // .arrow-rightの修正
+const arrowRight = document.querySelector('.arrow-right'); 
 const arrowLeft = document.querySelector('.arrow-left');
 
 // タブクリック時の処理
@@ -26,8 +26,10 @@ arrowRight.addEventListener('click', function () {
       contents[i].classList.remove('show');
     }
   });
-  tabs[0].classList.remove('active');
-  contents[0].classList.remove('active');
+  // 全てのtabとcontentsからactiveを消す
+  tabs.forEach(tab => tab.classList.remove('active'));
+  contents.forEach(content => content.classList.remove('active'));
+  // 4番目のtabとcontentsにactiveをつける
   tabs[4].classList.add('active');
   contents[4].classList.add('active');
   
@@ -48,8 +50,9 @@ arrowLeft.addEventListener('click', function () {
       contents[i].classList.remove('show');
     }
   });
-  tabs[4].classList.remove('active');
-  contents[4].classList.remove('active');
+  tabs.forEach(tab => tab.classList.remove('active'));
+  contents.forEach(content => content.classList.remove('active'));
+  // 1番目のtabとcontentsにactiveをつける
   tabs[0].classList.add('active');
   contents[0].classList.add('active');
   
