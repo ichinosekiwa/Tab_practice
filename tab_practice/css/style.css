@@ -18,14 +18,18 @@ ul li {
 
 .tabs {
   display: flex;
+  justify-content: space-between;
   font-size: 16px;
   border-bottom: 1px solid #bbbbbb2d;
 }
 
 .tabs li {
+  display: none;
+}
+.tabs li.show {
+  display: flex;
   width: 20%;
   padding: 8px;
-  text-align: center;
 }
 .tabs li.active {
   cursor: pointer;
@@ -37,20 +41,6 @@ ul li {
   opacity: 0.6;
 }
 
-.first-tabs,
-.second-tabs {
-  display: none;
-}
-.first-tabs.active{
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-}
-.second-tabs.active{
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-}
 .contents {
   display: flex;
 }
@@ -65,19 +55,16 @@ ul li {
   padding: 8px;
 }
 
-.arrow {
+.arrow-right,
+.arrow-left {
   display: none;
 }
-.arrow.active {
+.arrow-right.show,
+.arrow-left.show {
   width: 40px;
-  height: 40px;
-  display: block;
-}
-.arrow-2 {
-  display: none;
-}
-.arrow-2.active {
-  width: 40px;
-  height: 40px;
-  display: block;
+  height: auto;
+  display: grid;
+  place-items: center;
+  background-color: transparent;
+  border: none;
 }
