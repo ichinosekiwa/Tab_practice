@@ -4,6 +4,7 @@ const tabs = document.querySelectorAll('.tabs li');
 const contents = document.querySelectorAll('.contents li');
 const arrowRight = document.querySelector('.arrow-right'); 
 const arrowLeft = document.querySelector('.arrow-left');
+const visibleTabs = 4 //表示するタブの数
 
 // タブクリック時の処理
 tabs.forEach((tab, i) => {
@@ -17,8 +18,7 @@ tabs.forEach((tab, i) => {
 // 「＞」ボタンクリック時
 arrowRight.addEventListener('click', function () {
   tabs.forEach((tab, i) => {
-    if (i > 3) {
-      // 3でいいの...？
+    if (i >= visibleTabs) {
       tab.classList.add('show');
       contents[i].classList.add('show');
     } else {
@@ -42,7 +42,7 @@ arrowRight.addEventListener('click', function () {
 arrowLeft.addEventListener('click', function () {
   // 1〜4のタブとコンテンツに.showをつける、5〜8からは.showを消す
   tabs.forEach((tab, i) => {
-    if (i < 4) {
+    if (i < visibleTabs) {
       tab.classList.add('show');
       contents[i].classList.add('show');
     } else {
